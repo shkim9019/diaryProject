@@ -1,0 +1,145 @@
+/* New */
+.New {
+  margin:15px 0 15px 0;
+  padding: 15px 0 15px 0;
+}
+.New h1{
+  text-align: center;
+  font-size: 4rem;
+}
+
+.New h1 > span{
+  padding-left: 1.2rem;
+  font-size: 3rem;
+  color: gray;
+}
+
+.New h2{
+  margin: 15px 0 15px 0;
+  text-align: left;
+  font-size: 2.5rem;
+}
+
+.New .backBtn{
+  background-color: #94D7F9 ;
+  border: hidden;
+  font-size: 2rem;
+  color: black;
+}
+
+.New .backBtn:hover{
+  background-color: #94d7f96e;
+  border: hidden;
+  color: gray;
+}
+
+.New .scheduleDiv{
+  min-height: 300px;
+  margin: 15px 0 15px 0;
+  padding: 15px 0 15px 0;
+  border: 1px solid #8D9BB8;
+  border-radius: 4px;
+}
+
+.New .chkDiv{
+  align-self: center;
+}
+
+.New .form-check-input{
+  border: 1px solid #8D9BB8;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.New .form-check-input:checked {
+  background-color: #66beeb;
+  border-color: #66beeb;
+}
+
+.New .input-group-text{
+  border: hidden;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 2rem;
+  white-space: break-spaces;
+  text-align: justify;
+}
+
+.New .scheduleDiv > div{
+  align-self: center;
+  margin: 2px 0 2px 0;
+  padding: 2px 0 2px 0;
+}
+
+.New .scheduleDiv .content,
+.New .scheduleDiv .noContent{
+  font-size: 2rem;
+  text-align: justify;
+}
+
+.New .scheduleDiv .content input{
+  background-color: #F5F9FF;
+  font-size: 2rem;
+  /* border: hidden; */
+}
+
+.New .scheduleDiv .noContent{
+  margin: 20px;
+  padding: 20px;
+}
+
+.New .editBtn{
+  background-color: #AAAED1;
+  border:hidden;
+  color: black;
+  vertical-align: middle;
+  font-size: 1.3rem;
+}
+
+.New .editBtn:hover{
+  background-color: #aaaed17c;
+  border:hidden;
+  color: gray;
+}
+
+.New .delBtn{
+  background-color: #B8C6E4;
+  border:hidden;
+  color: black;
+  vertical-align: middle;
+  font-size: 1.3rem;
+}
+
+.New .delBtn:hover{
+  background-color: #b8c6e465;
+  border:hidden;
+  color: gray;
+}
+
+.New .input-group textarea,
+.New .input-group span{
+  border: 1px solid #8D9BB8;
+  background-color: #F5F9FF;
+  border-radius: 4px;
+}
+
+.New .input-group textarea{
+  width: 95%;
+  min-height: 100px;
+}
+
+.New .form-control:focus,
+.New .form-control:active{
+  outline: none;
+}
+
+.New .input-group span{
+  width: 5%;
+  background-color: #B8C6E4;
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.New .input-group span:hover{
+  cursor: pointer;
+}

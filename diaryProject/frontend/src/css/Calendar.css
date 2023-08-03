@@ -1,0 +1,122 @@
+@import './App.css' (min-width:500px);
+
+/* Calendar */
+.Calendar{
+  margin-top: 10px;
+  padding-top: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.Calendar .react-calendar{
+  width: 100%;
+  /* height: calc(100vh - 20em); */
+  height: 100%;
+  border: 1px solid rgb(184, 198, 228);
+  font-family: Jua;
+}
+
+.Calendar .dot{
+  height: 8px;
+  width: 8px;
+  background-color: #f87171;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 70%;
+}
+
+.Calendar .react-calendar__navigation{
+  background-color: rgb(184, 198, 228);
+  border: 1px solid rgb(184, 198, 228);
+  font-size: 1.7em;
+}
+
+.Calendar .react-calendar__navigation button:hover,
+.Calendar .react-calendar__navigation button:active,
+.Calendar .react-calendar__navigation button:enabled:hover,
+.Calendar .react-calendar__navigation button:enabled:focus{
+  background-color: rgb(184, 198, 228,0);
+}
+
+.Calendar .react-calendar__viewContainer{
+  font-size: 1.5em;
+}
+
+.Calendar .react-calendar__month-view__days:hover{
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.Calendar .react-calendar__month-view__weekdays__weekday abbr {
+  border-bottom: solid 1px gray;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.Calendar .react-calendar__month-view__days button{
+  height: 3.5em;  
+}
+
+.Calendar .react-calendar__tile--now{
+  background-color: #a4abbd4d;
+  text-decoration: underline;
+}
+
+.Calendar .react-calendar__month-view__days:hover,
+.Calendar .react-calendar__tile--now:hover,
+.Calendar .react-calendar__tile:enabled:hover,
+.Calendar .react-calendar__tile:enabled:focus
+{
+  background-color: #a4abbd80;
+}
+
+.Calendar .react-calendar__tile--active:enabled:hover,
+.Calendar .react-calendar__tile--active:enabled:focus,
+.Calendar .react-calendar__tile--active{
+  background-color: #A4ABBD;
+  border: 1px solid #404756;
+  color: white;
+}
+
+.Calendar .react-calendar__month-view__days__day--neighboringMonth{
+  color: rgba(20, 19, 19, 0.151);
+}
+
+.Calendar h1 :not(span){
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.Calendar .diaryList  span{
+  font-size: 1.5rem;
+}
+
+.Calendar .diaryList{
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.Calendar .diaryList >div:first-child{
+  text-align: left;
+}
+
+.Calendar .diaryList >div:last-child{
+  text-align: right;
+}
+
+.Calendar .btn{
+  background-color: #94D7F9;
+  border: hidden;
+  font-size: 2rem;
+}
+
+.Calendar .btn:hover{
+  background-color: #94d7f96e;  
+  border: hidden;
+  color: gray;
+}
+
+.Calendar .listDiv{
+  margin-left: 15px;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 1.5rem;
+}

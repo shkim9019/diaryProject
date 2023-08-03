@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&family=Yeon+Sung&display=swap');
+
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+#root {
+  min-width: 80vw;
+  height: auto;
+  background-color: #F5F9FF;
+  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+}
+
+body{
+  font-family: 'Nanum Pen Script' !important;
+  background-color: #DFF1FF  !important;
+  min-height: 100vh;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  
+  /* 스크롤바 기능만 유지 */
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none;    /* 파이어폭스 */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+/* Header */
+.Header{  
+  margin: 0;
+  padding: 0;
+}
+
+.Header a{
+  text-decoration: none;
+  /* color: #373acc; */
+  color: navy;
+}
+
+.Header img{
+  width: 3em;
+  height: 3em;
+}
+
+.Header .logoWrapper{
+  width: fit-content;
+  margin: 1em 0 0 2em;
+  display: flex;
+  text-align: center;
+}
+
+.Header .logoWrapper :hover{
+  cursor: pointer;
+}
+
+.Header h1{
+  padding-top: 0.3em;
+  font-size: 2em;
+  padding-left: 10px;
+  font-family: Jua;
+}

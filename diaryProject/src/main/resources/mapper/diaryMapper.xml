@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.diary.mapper.DiaryMapper">
+    <insert id="insertDiary" parameterType="com.study.diary.mapper.DiaryVO">
+        INSERT INTO DIARY(diary_date,content,chkYn)
+        VALUES (#{diaryDate},#{content},'N')
+    </insert>
+    
+    <delete id="deleteDiary" parameterType="com.study.diary.mapper.DiaryVO">
+        DELETE FROM DIARY
+        WHERE diary_id = #{diaryId}
+    </delete>
+    
+    <update id="updateDiary" parameterType="com.study.diary.mapper.DiaryVO">
+		UPDATE DIARY
+		SET content = #{content},
+			chkYn   = #{chkYn}
+		WHERE diary_id = ${diaryId}
+	</update>
+		
+	<select id="getDiaryList" parameterType="com.study.diary.mapper.DiaryVO">
+		SELECT 
+			diary_id   AS diaryId
+		   ,diary_date AS diaryDate
+		   ,content
+		   ,chkYn 
+		FROM DIARY
+		WHERE 1=1
+		<if test="diaryDate!=null">
+			AND date_format(diary_date,'%Y%m%d') = #{diaryDate}
+		</if>
+		<if test="diaryDateByMonth!=null">
+			AND date_format(diary_date,'%Y%m') = #{diaryDateByMonth}
+		</if>
+		<if test="diaryId != null and diaryId>0">
+			AND diary_id = #{diaryId}
+		</if>
+		<if test="content != null">
+			AND content = #{content}
+		</if>
+	</select>
+</mapper>

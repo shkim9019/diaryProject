@@ -1,0 +1,51 @@
+/* Home */
+.Home{
+  height: calc(100vh - 5em);
+}
+
+.Home a{
+  text-decoration: none;
+}
+
+.Home .intro{
+  width: 100%;
+  position: relative;
+}
+
+.Home .intro img {
+  width: 100%;
+  height: calc(100vh - 12em);
+  vertical-align: middle;
+  opacity: 075;
+}
+
+.Home .intro p {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: right;
+  font-size: 2em;
+  word-wrap: break-word;
+}
+
+.Home .showCal {
+  margin-top: 1em;
+  height: 4em;
+}
+
+.Home .btn{
+  font-size: 2em;
+  background-color: #94D7F9 ;
+  border: hidden;
+  font-size: 2rem;
+  color: black;
+}
+
+.Home .btn:hover{
+  background-color: #94d7f96e;
+  border: hidden;
+  color: gray;
+}
