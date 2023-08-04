@@ -70,7 +70,7 @@ const New = () =>{
         <Col xxl={9} md={9} sm={9} xs={9} xxs={9}>
           <h1>
             오늘의 할일 
-            <span> ◜{date}◞ </span>
+            <span> ◜{moment(date).format('YYYY-MM-DD')}◞ </span>
           </h1>
         </Col>
         <Col xxl={3} md={3} sm={3} xs={3} xxs={3} className="d-grid">

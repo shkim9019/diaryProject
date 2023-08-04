@@ -13,7 +13,7 @@ import { ScheduleDataContext } from '../App';
 const Calendar = () => {
   let {monthData,setThisMonth} = useContext(ScheduleDataContext);
   const navigate = useNavigate();
-  const [date,setDate] = useState(moment().format('YYYY-MM-DD'));
+  const [date,setDate] = useState(moment().format('YYYYMMDD'));
   const [mark,setMark] = useState([]);
 
   useEffect(()=>{
@@ -31,7 +31,7 @@ const Calendar = () => {
   },[monthData]);
 
   const handleDate =(targetDate)=>{
-    setDate(moment(targetDate).format('YYYY-MM-DD'));
+    setDate(moment(targetDate).format('YYYYMMDD'));
   }
 
    // 달이 바뀔 때 달별 데이터 불러오기
@@ -39,20 +39,19 @@ const Calendar = () => {
     if(moment(date).format('YYYYMM') !== moment(targetDate).format('YYYYMM')){
       setThisMonth(moment(targetDate).format('YYYYMM'));
     }
-    setDate(moment(targetDate).format('YYYY-MM-DD'));    
+    setDate(moment(targetDate).format('YYYYMMDD'));    
   }
 
   return (
     <Container className='Calendar'>
       <Cal
         calendarType='gregory' //일요일부터 시작
-        defaultValue={new Date(date)}
         formatDay={(locale,date) => moment(date).format('DD')} //숫자만 보이도록 설정
         onChange={(e)=>handleDate(e)}
         onActiveStartDateChange={(e)=>handleMonth(e.activeStartDate)}
         showNeighboringMonth={false}
         tileContent={({date,view})=>{
-          if(mark.find((x)=> x === moment(date).format('YYYY-MM-DD'))){
+          if(mark.find((x)=> x === moment(date).format('YYYYMMDD'))){
             return(
                 <div className="dot"></div>
             )
@@ -77,7 +76,7 @@ const Calendar = () => {
       <Row className='listDiv'>
         <ul>
           {monthData?monthData.map((it)=>{
-            const dataByMonth = moment(it.diaryDate).format('YYYY-MM-DD');
+            const dataByMonth = moment(it.diaryDate).format('YYYYMMDD');
             if(dataByMonth === date){
               return(
                 <li key={it.diaryId}>{it.content}</li>

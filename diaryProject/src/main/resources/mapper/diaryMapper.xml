@@ -23,7 +23,7 @@
 	<select id="getDiaryList" parameterType="com.study.diary.mapper.DiaryVO">
 		SELECT 
 			diary_id   AS diaryId
-		   ,diary_date AS diaryDate
+		   ,date_format(diary_date,'%Y%m%d') AS diaryDate
 		   ,content
 		   ,chkYn 
 		FROM DIARY
